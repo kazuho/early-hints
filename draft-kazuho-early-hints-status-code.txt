@@ -105,7 +105,7 @@ Table of Contents
    ([RFC7231], section 6.2) that contains headers that are likely to be
    included in the final response.  A server can send the informational
    response containing some of the headers to help the client start
-
+   making preparations for processing the final response, and then run
 
 
 
@@ -114,8 +114,9 @@ Oku                        Expires May 4, 2017                  [Page 2]
 Internet-Draft  An HTTP Status Code for Indicating Hints    October 2016
 
 
-   making preparations for processing the final response, and then run
-   time-consuming operations to generate the final response.
+   time-consuming operations to generate the final response.  The
+   informational response can also be used by an origin server to
+   trigger HTTP/2 push at an caching intermediary.
 
 1.1.  Notational Conventions
 
@@ -161,7 +162,6 @@ Internet-Draft  An HTTP Status Code for Indicating Hints    October 2016
    be updated with the following entries:
 
    o  Code: 103
-
 
 
 
