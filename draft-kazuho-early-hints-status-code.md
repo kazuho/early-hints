@@ -42,7 +42,7 @@ This memo introduces an informational status code for HTTP that can be used for 
 
 # Introduction
 
-Most if not all of the web pages processed by a web browser contains links to external resources that need to be fetched prior to rendering the document.
+Most if not all of the web pages processed by a web browser contain links to external resources that need to be fetched prior to rendering the document.
 Therefore, it is benefitial to send such links as early as possible in order to minimize the time spent until the browser becomes possible to render the document.
 Link header of type "preload" ([Preload]) can be used to indicate such links within the response headers of an HTTP response.
 
