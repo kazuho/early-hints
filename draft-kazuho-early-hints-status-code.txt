@@ -73,7 +73,7 @@ Table of Contents
 
 1.  Introduction
 
-   Most if not all of the web pages processed by a web browser contains
+   Most if not all of the web pages processed by a web browser contain
    links to external resources that need to be fetched prior to
    rendering the document.  Therefore, it is benefitial to send such
    links as early as possible in order to minimize the time spent until
