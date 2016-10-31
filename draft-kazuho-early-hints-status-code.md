@@ -60,6 +60,7 @@ Sending HTTP responses for every resource is an inefficient way of using bandwid
 
 This memo defines a status code for sending an informational response ([RFC7231], section 6.2) that contains headers that are likely to be included in the final response.
 A server can send the informational response containing some of the headers to help the client start making preparations for processing the final response, and then run time-consuming operations to generate the final response.
+The informational response can also be used by an origin server to trigger HTTP/2 push at an caching intermediary.
 
 ## Notational Conventions
 
