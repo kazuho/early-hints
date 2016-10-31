@@ -55,8 +55,8 @@ The dilemma here is that even though it is preferable for an origin server to se
 
 HTTP/2 ([RFC7540]) push can be used as a solution to the issue, but has its own limitations.
 The resources that can be pushed using HTTP/2 are limited to those belonging to the same origin.
-Also, it is impossible to send only the links of the external resources using HTTP/2 push.
-Sending HTTP responses for every external resource is an inefficient way of using the bandwidth, especially when a cache server exists as an intermediary.
+Also, it is impossible to send only the links of the resources using HTTP/2 push.
+Sending HTTP responses for every resource is an inefficient way of using the bandwidth, especially when a cache server exists as an intermediary.
 
 This memo defines a status code for sending an informational response ([RFC7231], section 6.2) that contains headers that are likely to be included in the final response.
 A server can send the informational response containing some of the headers to help the client start making preparations for processing the final response, and then run time-consuming operations to generate the final response.
