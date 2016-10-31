@@ -98,8 +98,8 @@ Table of Contents
    HTTP/2 are limited to those belonging to the same origin.  Also, it
    is impossible to send only the links of the resources using HTTP/2
    push.  Sending HTTP responses for every resource is an inefficient
-   way of using the bandwidth, especially when a cache server exists as
-   an intermediary.
+   way of using bandwidth, especially when a caching server exists as an
+   intermediary.
 
    This memo defines a status code for sending an informational response
    ([RFC7231], section 6.2) that contains headers that are likely to be
