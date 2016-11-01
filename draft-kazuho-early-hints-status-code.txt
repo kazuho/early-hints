@@ -66,9 +66,10 @@ Table of Contents
    3.  Interoperatibility Issues . . . . . . . . . . . . . . . . . .   3
    4.  Security Considerations . . . . . . . . . . . . . . . . . . .   3
    5.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   3
-   6.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   4
-     6.1.  Normative References  . . . . . . . . . . . . . . . . . .   4
-     6.2.  Informative References  . . . . . . . . . . . . . . . . .   4
+   6.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   4
+   7.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   4
+     7.1.  Normative References  . . . . . . . . . . . . . . . . . .   4
+     7.2.  Informative References  . . . . . . . . . . . . . . . . .   4
    Author's Address  . . . . . . . . . . . . . . . . . . . . . . . .   4
 
 1.  Introduction
@@ -105,7 +106,6 @@ Table of Contents
    ([RFC7231], section 6.2) that contains headers that are likely to be
    included in the final response.  A server can send the informational
    response containing some of the headers to help the client start
-   making preparations for processing the final response, and then run
 
 
 
@@ -114,6 +114,7 @@ Oku                        Expires May 4, 2017                  [Page 2]
 Internet-Draft  An HTTP Status Code for Indicating Hints    October 2016
 
 
+   making preparations for processing the final response, and then run
    time-consuming operations to generate the final response.  The
    informational response can also be used by an origin server to
    trigger HTTP/2 push at an caching intermediary.
@@ -127,7 +128,7 @@ Internet-Draft  An HTTP Status Code for Indicating Hints    October 2016
 2.  103 Early Hints
 
    This informational status code indicates the client that the server
-   is likely to send a final request with the headers included in the
+   is likely to send a final response with the headers included in the
    informational response.
 
    A server MUST NOT include Content-Length, Transfer-Encoding, or any
@@ -161,7 +162,6 @@ Internet-Draft  An HTTP Status Code for Indicating Hints    October 2016
    If Early Hints is standardized, the HTTP Status Codes Registry should
    be updated with the following entries:
 
-   o  Code: 103
 
 
 
@@ -170,13 +170,20 @@ Oku                        Expires May 4, 2017                  [Page 3]
 Internet-Draft  An HTTP Status Code for Indicating Hints    October 2016
 
 
+   o  Code: 103
+
    o  Description: Early Hints
 
    o  Specification: this document
 
-6.  References
+6.  Acknowledgements
 
-6.1.  Normative References
+   Thanks to Tatsuhiro Tsujikawa for coming up with the idea of sending
+   the link headers using an informational response.
+
+7.  References
+
+7.1.  Normative References
 
    [RFC2119]  Bradner, S., "Key words for use in RFCs to Indicate
               Requirement Levels", BCP 14, RFC 2119,
@@ -198,7 +205,7 @@ Internet-Draft  An HTTP Status Code for Indicating Hints    October 2016
               DOI 10.17487/RFC7540, May 2015,
               <http://www.rfc-editor.org/info/rfc7540>.
 
-6.2.  Informative References
+7.2.  Informative References
 
    [Preload]  Grigorik, I., "Preload", September 2016,
               <https://w3c.github.io/preload/>.
@@ -209,13 +216,6 @@ Author's Address
    DeNA Co., Ltd.
 
    Email: kazuhooku@gmail.com
-
-
-
-
-
-
-
 
 
 
