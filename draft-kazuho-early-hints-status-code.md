@@ -100,4 +100,4 @@ If Early Hints is standardized, the HTTP Status Codes Registry should be updated
 
 # Acknowledgements
 
-Thanks to Tatsuhiro Tsujikawa for coming up with the idea to send the link headers using an informational response.
+Thanks to Tatsuhiro Tsujikawa for coming up with the idea of sending the link headers using an informational response.
