@@ -70,7 +70,7 @@ interpreted as described in [RFC2119].
 
 # 103 Early Hints
 
-This informational status code indicates the client that the server is likely to send a final request with the headers included in the informational response.
+This informational status code indicates the client that the server is likely to send a final response with the headers included in the informational response.
 
 A server MUST NOT include Content-Length, Transfer-Encoding, or any hop-by-hop headers ([RFC7230], section 6.1) in the informational response using the status code.
 
